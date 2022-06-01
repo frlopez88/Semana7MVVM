@@ -2,12 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Listas.Vistas.ViewContacto"
-    Title="Docente">
+    x:Class="Listas.Vistas.ViewDocente">
     <ContentPage.Content>
         <StackLayout>
-
-            <Label Text="Formulario de Contactos"> </Label>
+            <Label Text="Formulario de Docentes"></Label>
 
         </StackLayout>
     </ContentPage.Content>

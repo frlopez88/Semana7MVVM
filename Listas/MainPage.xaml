@@ -3,10 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Listas.MainPage"
              xmlns:local="clr-namespace:Listas.Vistas"
-
             >
 
-    <local:ViewContacto></local:ViewContacto>
-    <local:ViewReporteContactos></local:ViewReporteContactos>
+  <local:ViewAlumno></local:ViewAlumno>
+  <local:ViewDocente></local:ViewDocente>
 
 </TabbedPage>

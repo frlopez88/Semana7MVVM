@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace Listas.Vistas
 {
-    public partial class ViewContacto : ContentPage
+    public partial class ViewAlumno : ContentPage
     {
-        public ViewContacto()
+        public ViewAlumno()
         {
             InitializeComponent();
         }
