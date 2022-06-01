@@ -3,10 +3,29 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Listas.Vistas.ViewAlumno"
-    Title="Alumno">
+    Title="Alumno"
+    xmlns:local="clr-namespace:Listas.ViewModel"
+    >
+
+    <ContentPage.BindingContext>
+        <local:VMAlumno></local:VMAlumno>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Formulario de Alumnos"></Label>
+            <Label Text="Formulario de Alumnos" FontSize="50"></Label>
+
+            <Entry Text="{Binding Nombre}" Keyboard="Text" Placeholder="Ingrese Nombre de Alumno"/>
+            <Entry Text="{Binding Identidad}" Keyboard="Numeric" Placeholder="Ingrese Identidad" />
+
+            <Label Text="Faltas: "></Label>
+            <Label Text="{Binding Faltas}"></Label>
+            <Label Text="Reporte:"></Label>
+            <Label Text="{Binding Reporte}"></Label>
+
+            <Button Text="Generar Falta" Command="{Binding FaltarClase}" ></Button>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
