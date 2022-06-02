@@ -24,7 +24,7 @@
             <Label Text="{Binding Reporte}"></Label>
 
             <Button Text="Guardar" Command="{Binding Guardar}" ></Button>
-
+            <Button Text="Buscar" Command="{Binding Buscar}" ></Button>
             <Button Text="Generar Falta" Command="{Binding FaltarClase}" ></Button>
 
 

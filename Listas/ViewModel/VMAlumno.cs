@@ -13,16 +13,6 @@ namespace Listas.ViewModel
             FaltarClase = new Command(
                      () => {
                          Faltas = Faltas + 1;
-
-                         if (Faltas <= 8) {
-                             Reporte = "El alumno " + Nombre + " tiene derecho a examen.";
-                         }
-                         else
-                         {
-                             Reporte = "El alumno " + Nombre + "  perdio drecho a examen.";
-
-                         }
-
                      }
                 );
 
@@ -33,11 +23,29 @@ namespace Listas.ViewModel
                         ModelAlumno x = new ModelAlumno() {
                             nombre = Nombre,
                             identidad = Identidad,
-                            cantidadFaltas=Faltas
+                            cantidadFaltas = Faltas
                         };
 
+                        // Esta variable me ayudara a saber si existia el registro
+                        // por lo tanto si es falsa debo asumir que adicionare el registro a la lista
+                        // si esl verdera es por que lo encontre en el ciclo for y por lo tanto
+                        // lo actualice.
+                        bool existia = false;
 
-                        listaGuardar.Add(x);
+                        for (int i = 0; i < listaGuardar.Count; i++) {
+
+                                if (listaGuardar[i].identidad == Identidad) {
+                                    listaGuardar[i] = x;
+                                    existia = true;
+                                }
+
+
+                        }
+
+                        if (existia == false) {
+                            listaGuardar.Add(x);
+                        }
+  
 
                     }
 
