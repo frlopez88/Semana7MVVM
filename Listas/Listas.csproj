@@ -17,9 +17,11 @@
   <ItemGroup>
     <None Remove="Vistas\" />
     <None Remove="ViewModel\" />
+    <None Remove="Model\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Vistas\" />
     <Folder Include="ViewModel\" />
+    <Folder Include="Model\" />
   </ItemGroup>
 </Project>
